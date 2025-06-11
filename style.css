@@ -30,7 +30,7 @@ main{
 /* Cesta */
 #basket {
     position: absolute;
-    bottom: 10vh;
+    bottom: 14vh;
     width: 15vw;
     height: 6vh;
     background-image: url(img/cesta_icon.svg);
@@ -79,7 +79,7 @@ main{
 #conteudo {
     position: relative;
     z-index: 1;
-    display: flex;
+    display: none;
     flex-direction: column;
     gap: 0;
     justify-content: center;
