@@ -55,7 +55,7 @@ function createLeaf() {
             score++;
             scoreEl.textContent = 'Pontos: ' + score;
 
-            if (score >= 5) {
+            if (score >= 1) {
                 gameArea.classList.add('hide-animation');
                 scoreEl.classList.add('hide-animation');
                 clearInterval(leafInterval);
