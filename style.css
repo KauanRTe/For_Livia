@@ -79,13 +79,19 @@ main{
 #conteudo {
     position: relative;
     z-index: 1;
-    display: none;
+    display: flex;
     flex-direction: column;
     gap: 0;
     justify-content: center;
     align-items: center;
     color:blanchedalmond;
     width: 90%;
+    margin-left: 4vw;
+}
+
+#text{
+    margin-left: 2vw;
+    height: auto;
 }
 
 #conteudo h1{
