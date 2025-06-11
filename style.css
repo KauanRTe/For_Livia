@@ -1,0 +1,153 @@
+body {
+    font-family: 'Tangerine', serif;
+    font-size: 48px;
+    text-shadow: 4px 4px 4px #aaa;
+    margin: 0;
+    background-image: url(img/background-img.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Plano de fundo do jogo */
+#game-area {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    overflow: hidden;
+}
+
+/* Cesta */
+#basket {
+    position: absolute;
+    bottom: 10vh;
+    width: 15vw;
+    height: 6vh;
+    background-image: url(img/cesta_icon.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 10px;
+    left: 50%;
+}
+
+/* Folhas */
+.leaf {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background-image: url('img/heart_icon.svg');
+    background-size: cover;
+    top: -40px;
+}
+
+/* Pontos */
+#score {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 24px;
+    color: #333;
+    z-index: 2;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+}
+
+.hide-animation {
+  animation: fadeOut 0.8s ease forwards;
+}
+
+/* Conteúdo principal */
+#conteudo {
+    position: relative;
+    z-index: 1;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+    justify-content: center;
+    align-items: center;
+    color:indianred;
+}
+
+#conteudo h1{
+    margin-bottom: 20px;
+}
+#conteudo h2{
+    margin-top: 20px;
+}
+
+#dicionario-title{
+  display: flex;
+}
+#dic-livia{
+  margin-top: 0;
+  color: blue;
+}
+
+#dicionario{
+  display: flex;
+  flex-direction: column;
+  width: 55vw;
+  align-items: center;
+}
+
+
+#mobile-controls {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    z-index: 2;
+}
+
+#mobile-controls button {
+    padding: 15px 20px;
+    font-size: 24px;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px;
+    backdrop-filter: blur(4px);
+    cursor: pointer;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 600px) {
+    body {
+        font-size: 32px;
+    }
+
+    #basket {
+        width: 22vw;
+        height: 8vh;
+    }
+
+    .leaf {
+        width: 24px;
+        height: 24px;
+    }
+
+    #conteudo h1 {
+        font-size: 28px;
+    }
+
+    #conteudo h2 {
+        font-size: 22px;
+    }
+
+    #score {
+        font-size: 20px;
+    }
+}
